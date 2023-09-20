@@ -4,8 +4,3 @@ resource "local_file" "abc" {
   filename = "${path.module}/abc.txt"
   # path.module은 실행되는 테라폼 모듈의 파일 시스템 경로
 }
-
-resource "local_file" "def" {
-  content = "def!"
-  filename = "${path.module}/def.txt"
-}
