@@ -18,7 +18,11 @@ resource "local_file" "abc" {
   # path.module은 실행되는 테라폼 모듈의 파일 시스템 경로
 }
 
+data "local_file" "abc" {
+  filename = local_file.abc.filename
+}
+
 resource "local_file" "def" {
-  content = local_file.abc.content
+  content = data.local_file.abc.content
   filename = "${path.module}/def.txt"
 }
