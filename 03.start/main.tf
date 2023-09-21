@@ -1,3 +1,7 @@
+terraform {
+  required_version = "< 1.0.0"
+}
+
 # local_file은 테라폼의 local 프로바이더로 파일을 프로비저닝하는데 사용
 resource "local_file" "abc" {
   content = "abc!"
