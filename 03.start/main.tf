@@ -19,6 +19,6 @@ resource "local_file" "abc" {
 }
 
 resource "local_file" "def" {
-  content = "456!"
+  content = "local_file.abc.content"
   filename = "${path.module}/def.txt"
 }
