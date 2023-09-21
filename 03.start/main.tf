@@ -6,6 +6,9 @@ terraform {
       version = ">= 2.0.0"
     }
   }
+  backend "local" {
+    path = "state/terrafrom.tfstate"
+  }
 }
 
 # local_file은 테라폼의 local 프로바이더로 파일을 프로비저닝하는데 사용
