@@ -18,7 +18,7 @@ resource "local_file" "abc" {
   # path.module은 실행되는 테라폼 모듈의 파일 시스템 경로
 }
 
-resource "aws_instance" "web" {
-  ami = "ami-a1b2c3d4"
-  instance_type = "t2.micro"
+resource "local_file" "def" {
+  content = "456!"
+  filename = "${path.module}/def.txt"
 }
