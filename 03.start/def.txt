@@ -1,1 +1,1 @@
-local_file.abc.content
+123!
