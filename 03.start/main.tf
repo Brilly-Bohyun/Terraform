@@ -44,19 +44,11 @@ resource "local_file" "abc" {
   # path.module은 실행되는 테라폼 모듈의 파일 시스템 경로
 }
 
-output "file_id" {
-  value = local_file.abc.id
-}
+# resource "aws_instance" "web" {
+#   ami = "ami-08d0e13d30abe253"
+#   instance_type = "t3.micro"
 
-output "file_abspath" {
-  value = abspath(local_file.abc.filename)
-}
-
-data "local_file" "abc" {
-  filename = local_file.abc.filename
-}
-
-resource "local_file" "def" {
-  content = data.local_file.abc.content
-  filename = "${path.module}/def.txt"
-}
+#   tags = {
+#     name = "HelloWorld"
+#   }
+# }
